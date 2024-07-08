@@ -1,6 +1,8 @@
 
 
  const BASE_URL ="https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies";
+
+// This particular API format has to be changed for proper functionality.
   
 
 const dropdowns = document.querySelectorAll(".dropdown select");
@@ -35,7 +37,10 @@ const updateExchangeRate = async () => {
     amount.value = "1";
   }
   const URL = `${BASE_URL}/${fromCurr.value.toLowerCase()}/${toCurr.value.toLowerCase()}.json`;
-  let response = await fetch(URL);
+  // This particular API format has stopped functioning.
+ 
+ 
+ let response = await fetch(URL);
   let data = await response.json();
   let rate = data[toCurr.value.toLowerCase()];
 
